@@ -6,6 +6,7 @@ syntax enable                   " activates syntax highlighting
 set tabstop=4                   " number of visual spaces per TAB
 set softtabstop=4               " inserts 4 tabs for TAB
 set expandtab                   " tabs are spaces
+set shiftwidth=4                " indent 4 spaces
 
 " Folderstuff
 set backupdir=~/.vim/backups    " set backup folder
@@ -19,7 +20,7 @@ set colorcolumn=80              " show ruler after 80 chars
 filetype plugin indent on       " load filetype-specific indent and plugin files
 map <F4> :NERDTreeToggle<CR>    " maps F4 as NerdTree toggle
 let NERDTreeShowHidden=1        " show hidden files in NerdTree
-set pastetoggle=<F10>           " use F10 as toggle for pastemode, to safely paste code without indention
+set pastetoggle=<F6>            " use F6 as toggle for pastemode, to safely paste code without indention
 set wildmenu                    " visual autocomplete for command menu
 set showmatch                   " highlight matching parenthesis
 set encoding=utf-8              " utf-8

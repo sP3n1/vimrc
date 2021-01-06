@@ -36,10 +36,13 @@ map <F5> :nohlsearch<CR>        " use F5 for deleting search highlights
 set ignorecase                  " no case sensitive searching
 set smartcase                   " case sensitive searching only with upper case characters
 
+" Mouse things
+set mouse=n                     " enables mouse usage for normal mode
+
 " Functions
 
 "" restores cursor position
-autocmd BufReadPost *                                                                                                                                  
+autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif

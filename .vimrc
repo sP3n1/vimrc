@@ -39,7 +39,20 @@ set smartcase                   " case sensitive searching only with upper case 
 " Mouse things
 set mouse=n                     " enables mouse usage for normal mode
 
-" Functions
+""""" vim-ale settings
+
+" fixers
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\   'python': ['autoimport', 'autoflake', 'isort', 'black']
+\}
+let g:ale_fix_on_save = 1
+
+" error symbol to use in sidebar
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠'
+
 
 "" restores cursor position
 autocmd BufReadPost *

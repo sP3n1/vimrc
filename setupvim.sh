@@ -17,6 +17,9 @@ git clone --depth=1 https://tpope.io/vim/fugitive.git ~/.vim/pack/git-plugins/st
 # install vim-ale
 git clone --depth 1 https://github.com/dense-analysis/ale.git ~/.vim/pack/git-plugins/start/ale
 < /dev/tty vim -u NONE -c "helptags ~/.vim/pack/git-plugins/start/vim-ale/doc" -c q
+# install vim-polyglot
+git clone --depth 1 https://github.com/sheerun/vim-polyglot.git ~/.vim/pack/git-plugins/start/vim-polyglot
+< /dev/tty vim -u NONE -c "helptags ~/.vim/pack/git-plugins/start/vim-polyglot/doc" -c q
 
 echo
 echo "[+] vim is configured and ready to use \\o/"

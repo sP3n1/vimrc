@@ -7,6 +7,7 @@ set tabstop=4                   " number of visual spaces per TAB
 set softtabstop=4               " inserts 4 tabs for TAB
 set expandtab                   " tabs are spaces
 set shiftwidth=4                " indent 4 spaces
+set ff=unix                     " don't
 
 " Folderstuff
 set backupdir=~/.vim/backups    " set backup folder
@@ -28,6 +29,7 @@ set ruler                       " show position of cursor in right-lower corner
 set showcmd                     " show uncomplete command (like d, c etc.)
 map <Tab> :tabn<CR>             " use tab to switch between tabs (forwards)
 map <S-Tab> :tabp<CR>           " use shift-tab to switch between tabs (backwards)
+set splitbelow                  " split window by adding the new window below the current one
 
 " Searching
 set incsearch                   " search as characters are entered
@@ -45,6 +47,7 @@ set mouse=n                     " enables mouse usage for normal mode
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint'],
+\   'hcl': ['terraform'],
 \   'python': ['autoimport', 'autoflake', 'isort', 'black']
 \}
 let g:ale_fix_on_save = 1
@@ -52,6 +55,13 @@ let g:ale_fix_on_save = 1
 " error symbol to use in sidebar
 let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠'
+
+" configure gitlablint
+let g:ale_pattern_options = {
+\   '.gitlab-ci\.yml$': {
+\       'ale_linters': ['gitlablint'],
+\   },
+\}
 
 
 "" restores cursor position

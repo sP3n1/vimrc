@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-mkdir -p ~/.vim/plugin ~/.vim/doc ~/.vim/backups ~/.vim/undo ~/.vim/swaps
+mkdir -p ~/.vim/plugin ~/.vim/doc ~/.vim/backups ~/.vim/undo ~/.vim/swaps ~/.vim/tags
 cd
 wget "https://raw.githubusercontent.com/sP3n1/vimrc/master/.vimrc"
 
@@ -20,6 +20,11 @@ git clone --depth 1 https://github.com/dense-analysis/ale.git ~/.vim/pack/git-pl
 # install vim-polyglot
 git clone --depth 1 https://github.com/sheerun/vim-polyglot.git ~/.vim/pack/git-plugins/start/vim-polyglot
 < /dev/tty vim -u NONE -c "helptags ~/.vim/pack/git-plugins/start/vim-polyglot/doc" -c q
+# For tags, install universal-ctags `sudo apt install universal-ctags` or `brew install universal-ctags`
+# install vim-gutentags
+git clone --depth=1 https://github.com/ludovicchabant/vim-gutentags.git ~/.vim/pack/git-plugins/start/vim-gutentags
+< /dev/tty vim -u NONE -c "helptags ~/.vim/pack/git-plugins/start/vim-gutentags/doc" -c q
+
 
 echo
 echo "[+] vim is configured and ready to use \\o/"

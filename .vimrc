@@ -71,6 +71,9 @@ let g:gutentags_modules = ['ctags']
 " generate datebases in vim directory, prevent gtags files polluting my project
 let g:gutentags_cache_dir = expand('~/.vim/tags')
 
+" additional Arguments to ctags
+let g:gutentags_ctags_extra_args = ['--kinds-php=-a']
+
 " add TAGS to statusline when gutentags is generating things
 set statusline+=%{gutentags#statusline()}
 

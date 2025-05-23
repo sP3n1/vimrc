@@ -28,3 +28,6 @@ git clone --depth=1 https://github.com/ludovicchabant/vim-gutentags.git ~/.vim/p
 
 echo
 echo "[+] vim is configured and ready to use \\o/"
+echo "[i] Please make sure you have installed the necessary dependencies:"
+echo "[i] apt: 'sudo apt install universal-ctags shellcheck python3-autoimport python3-autoflake python3-isort python3-black terraform eslint'"
+echo "[i] mac: 'brew install universal-ctags terraform eslint pipx shellcheck && pipx install autoimport autoflake isort black"

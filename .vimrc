@@ -1,6 +1,8 @@
 " colorstuff
 colorscheme murphy              " darkblue, delek, desert, evening, industry (other cool colorschemes)
 syntax enable                   " activates syntax highlighting
+set re=0                        " Use new regular expression engine
+set t_Co=256
 
 " spaces and tabs
 set tabstop=4                   " number of visual spaces per TAB
@@ -77,6 +79,8 @@ let g:gutentags_ctags_extra_args = ['--kinds-php=-a']
 " add TAGS to statusline when gutentags is generating things
 set statusline+=%{gutentags#statusline()}
 
+"""" jedi-vim settings
+let g:jedi#completions_command = "<C-N>"
 
 "" restores cursor position
 autocmd BufReadPost *

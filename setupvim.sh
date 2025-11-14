@@ -24,6 +24,9 @@ git clone --depth 1 https://github.com/sheerun/vim-polyglot.git ~/.vim/pack/git-
 # install vim-gutentags
 git clone --depth=1 https://github.com/ludovicchabant/vim-gutentags.git ~/.vim/pack/git-plugins/start/vim-gutentags
 < /dev/tty vim -u NONE -c "helptags ~/.vim/pack/git-plugins/start/vim-gutentags/doc" -c q
+# install jedi-vim
+git clone --depth 1 --recursive http://github.com/davidhalter/jedi-vim ~/.vim/pack/git-plugins/start/jedi-vim
+< /dev/tty vim -u NONE -c "helptags ~/.vim/pack/git-plugins/start/jedi-vim/doc" -c q
 
 
 echo
